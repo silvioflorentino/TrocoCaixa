@@ -140,7 +140,7 @@ namespace TrocoCaixa
             this.btnCalcular.TabIndex = 8;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = false;
-
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // label5
             // 
@@ -233,13 +233,14 @@ namespace TrocoCaixa
             // 
             // lbl001
             // 
-            this.lbl001.Location = new System.Drawing.Point(576, 360);
+            this.lbl001.Location = new System.Drawing.Point(576, 367);
             this.lbl001.Name = "lbl001";
             this.lbl001.Size = new System.Drawing.Size(44, 23);
             this.lbl001.TabIndex = 20;
             // 
             // TelaPrincipal
             // 
+            this.AcceptButton = this.btnCalcular;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -264,8 +265,10 @@ namespace TrocoCaixa
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "TelaPrincipal";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Caixa :: Troco";
             this.Load += new System.EventHandler(this.TelaPrincipal_Load);
             this.ResumeLayout(false);
